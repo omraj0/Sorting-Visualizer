@@ -42,7 +42,8 @@ main {
 
 #sidebar {
     /* background: #18ffff; */
-    background: #60ffff;
+    /* background: #60ffff; */
+    background: #84edff;
     grid-area: sidebar;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -127,7 +128,7 @@ button {
     /* border: 3px solid #18ffff; */
     /* border: 2px solid #00ffffcf;
     background-color: #00ffff; */
-    
+
     grid-area: sortButton;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: none;
@@ -137,21 +138,16 @@ button {
     border-radius: 20px;
     cursor: pointer;
 
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 button:hover {
-    /* background-color: rgb(53, 110, 242); */
-    /* background-color: #00FF00; */
-    /* background-color: #8fffff; */
-    background-color: rgb(232, 232, 232);
-    transition: 1.5s;
+    background-color: #b4f4ff;
+    transition: 0.5s;
+    box-shadow: none;
 }
 
 
-/* rgb(255, 255, 100)  
-rgb(255, 105, 105)  
-rgb(40, 255, 205)  */
 
 /* Sorting Visualizer Main Side */
 #bar {
@@ -170,12 +166,45 @@ rgb(40, 255, 205)  */
     width: 0.9%;
 }
 
+/* Range Slider Input Styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15vw;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    border-radius: 16px;
+}
 
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 15px;
+    background: #ccc;
+    border-radius: 16px;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 15px;
+    background: #ccc;
+    border-radius: 16px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid rgb(50, 130, 200);
+    box-shadow: -407px 0 0 400px rgb(50, 130, 200);
+}
 
 @media only screen and (max-width: 700px) {
-    nav{
+    nav {
         font-size: 30px;
     }
+
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1.5fr 7.5fr;
@@ -205,18 +234,28 @@ rgb(40, 255, 205)  */
         font-size: 14px;
     }
 
-    #newarr, #bubble, #insertion, #selection, #merge, #quick{
+    #newarr,
+    #bubble,
+    #insertion,
+    #selection,
+    #merge,
+    #quick {
         padding: 0.5rem;
     }
 
-    #spanSpeed, #spanSize{
-        font-size: 13px;
+    #spanSpeed,
+    #spanSize {
+        font-size: 12px;
         display: flex;
     }
 
-    button{
+    button {
         border-radius: 15px;
         font-weight: 500;
     }
 
-}   
+    input[type="range"] {
+        width: 25vw;
+    }
+
+}
