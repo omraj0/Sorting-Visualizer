@@ -1,0 +1,222 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas:
+        "nav nav"
+        "sidebar main";
+    grid-gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.6vw;
+    color: #004d40;
+    text-align: center;
+}
+
+nav {
+    background: #5fffda;
+    /* font-size: 3vw; */
+    font-size: 50px;
+    font-weight: 700;
+    padding: 1rem;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+main {
+    background: #8fffff;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#sidebar {
+    /* background: #18ffff; */
+    background: #60ffff;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "newArray"
+        "sizeArray"
+        "speedArray"
+        "bubbleSort"
+        "insertionSort"
+        "selectionSort"
+        "mergeSort"
+        "quickSort";
+}
+
+/* Sorting Visualizer Sidebar */
+#newarr {
+    grid-area: newArray;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
+    margin: 0.8rem;
+}
+
+#spanSize {
+    grid-area: sizeArray;
+    align-self: center;
+    justify-self: center;
+    font-size: 20px;
+}
+
+#spanSpeed {
+    grid-area: speedArray;
+    align-self: center;
+    justify-self: center;
+    font-size: 20px;
+}
+
+#bubble {
+    grid-area: bubbleSort;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
+}
+
+#selection {
+    grid-area: selectionSort;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
+}
+
+#insertion {
+    grid-area: insertionSort;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
+}
+
+#merge {
+    grid-area: mergeSort;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
+}
+
+#quick {
+    grid-area: quickSort;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
+}
+
+button {
+    /* border-style: double; */
+    /* padding: 4px 6px 4px 6px; */
+    /* border: 3px solid rgb(53, 110, 242); */
+
+    /* border: 3px solid #18ffff; */
+    /* border: 2px solid #00ffffcf;
+    background-color: #00ffff; */
+    
+    grid-area: sortButton;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    background-color: #ffffff;
+    font-size: 18px;
+    font-weight: 640;
+    border-radius: 20px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+button:hover {
+    /* background-color: rgb(53, 110, 242); */
+    /* background-color: #00FF00; */
+    /* background-color: #8fffff; */
+    background-color: rgb(232, 232, 232);
+    transition: 1.5s;
+}
+
+
+/* rgb(255, 255, 100)  
+rgb(255, 105, 105)  
+rgb(40, 255, 205)  */
+
+/* Sorting Visualizer Main Side */
+#bar {
+    color: rgb(255, 105, 105);
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    align-items: baseline;
+    justify-content: center;
+    margin: 10vw 0vw 0vw 0vw;
+}
+
+.baritem {
+    background: rgb(255, 255, 100);
+    border: 1px solid black;
+    width: 0.9%;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    nav{
+        font-size: 30px;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.5fr 7.5fr;
+        grid-template-areas:
+            "nav"
+            "sidebar"
+            "main";
+    }
+
+    #sidebar {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "newArray sizeArray sizeArray speedArray speedArray"
+            "bubbleSort insertionSort selectionSort mergeSort quickSort";
+    }
+
+    button {
+        font-size: 1.8vw;
+    }
+
+    #size {
+        font-size: 14px;
+    }
+
+    #spd {
+        font-size: 14px;
+    }
+
+    #newarr, #bubble, #insertion, #selection, #merge, #quick{
+        padding: 0.5rem;
+    }
+
+    #spanSpeed, #spanSize{
+        font-size: 13px;
+        display: flex;
+    }
+
+    button{
+        border-radius: 15px;
+        font-weight: 500;
+    }
+
+}   
