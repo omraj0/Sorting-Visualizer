@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Scripts & Images/favicon.png" />
+</head>
+
+<body>
+    <div class="container">
+
+        <nav>Sorting Visualizer</nav>
+        <main>
+            <div id="bar"></div>
+        </main>
+
+        <div id="sidebar">
+
+            <button id="newarr">New array</button>
+            <span id="spanSize">
+                Size: <input id="sizer" type="range" min=20 max=100 step=1 value=60>
+            </span>
+            <span id="spanSpeed">
+                Speed: <input id="speed" type="range" min=10 max=240 step=1 value=100>
+            </span>
+            <button id="bubble">Bubble Sort</button>
+            <button id="selection">Selection Sort</button>
+            <button id="insertion">Insertion Sort</button>
+            <button id="merge">Merge Sort</button>
+            <button id="quick">Quick Sort</button>
+
+        </div>
+
+    </div>
+
+    <script src="Scripts & Images/sorting.js"></script>
+    <script src="Scripts & Images/bubble.js"></script>
+    <script src="Scripts & Images/selection.js"></script>
+    <script src="Scripts & Images/insertion.js"></script>
+    <script src="Scripts & Images/merge.js"></script>
+    <script src="Scripts & Images/quick.js"></script>
+
+</body>
+
+</html>
