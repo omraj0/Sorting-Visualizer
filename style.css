@@ -258,4 +258,7 @@ input[type="range"]::-webkit-slider-thumb {
         width: 25vw;
     }
 
+    .baritem {
+        border: 0.4px solid black;
+    }    
 }
